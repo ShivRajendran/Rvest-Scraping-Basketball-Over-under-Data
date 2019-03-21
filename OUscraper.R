@@ -38,6 +38,7 @@ for (j in 888:NROW(df)){
   gamepage=read_html(xyz$url)
   
   #below is a stack overflow solution. It takes code in comments in HTML and uses it as source code
+  #code below is not my work but unfortunately i cannot find the link where this was saved
   alt_tables <- xml2::xml_find_all(gamepage,"//comment()") %>% {
     #Find only commented nodes that contain the regex for html table markup
     raw_parts <- as.character(.[grep("\\</?table", as.character(.))])
